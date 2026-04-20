@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC5J9M2VCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RC5J9M2VCC');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions | MIME360</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #E8541A;
+      --off-white: #F5F3EF;
+      --muted: #A8A8A8;
+      --bg-1: #090909;
+      --bg-2: #121212;
+      --card: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', sans-serif;
+      color: var(--off-white);
+      background:
+        radial-gradient(circle at 14% 10%, rgba(232,84,26,.12), transparent 34%),
+        radial-gradient(circle at 82% 24%, rgba(232,84,26,.08), transparent 28%),
+        linear-gradient(180deg, var(--bg-1), var(--bg-2));
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(232,84,26,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232,84,26,0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      opacity: .45;
+      z-index: 0;
+    }
+    .top-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg,#ff8a50,var(--orange)); z-index: 99; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 30px 20px 90px; position: relative; z-index: 1; }
+    .nav {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+      padding: 14px 16px; border: 1px solid var(--border); border-radius: 14px;
+      background: rgba(10,10,10,.72); backdrop-filter: blur(8px);
+      position: sticky; top: 14px; z-index: 20; margin-bottom: 26px;
+    }
+    .logo { text-decoration: none; color: var(--off-white); font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1.2px; }
+    .logo span { color: var(--orange); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nav-links a {
+      text-decoration: none; color: #ddd; font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+      border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; transition: .25s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { border-color: rgba(232,84,26,.8); color: #fff; background: rgba(232,84,26,.2); }
+    .hero {
+      border: 1px solid var(--border); border-radius: 20px; padding: clamp(24px, 4vw, 44px);
+      background: linear-gradient(130deg, rgba(255,255,255,.04), rgba(255,255,255,.01)); overflow: hidden; position: relative;
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 320px; height: 320px; right: -80px; top: -140px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,84,26,.30), transparent 65%); pointer-events: none;
+    }
+    .eyebrow { color: var(--orange); text-transform: uppercase; letter-spacing: 2px; font-weight: 800; font-size: 12px; margin-bottom: 10px; }
+    h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 9vw, 92px); line-height: .95; letter-spacing: 1.4px; margin-bottom: 12px; }
+    .lead { color: var(--muted); max-width: 72ch; font-size: 15px; }
+    .meta { margin-top: 16px; color: #d8d8d8; font-size: 13px; }
+    .section {
+      margin-top: 16px; border: 1px solid var(--border); border-radius: 16px; padding: clamp(18px, 2.8vw, 28px);
+      background: var(--card); opacity: 0; transform: translateY(26px); transition: .6s ease;
+    }
+    .section.in { opacity: 1; transform: translateY(0); }
+    h2 { font-family: 'Bebas Neue', sans-serif; color: var(--orange); font-size: clamp(28px, 4vw, 44px); letter-spacing: 1px; margin-bottom: 10px; }
+    p { color: #d2d2d2; font-size: 14px; }
+    ul { margin: 10px 0 8px 18px; color: #ddd; }
+    li { margin: 7px 0; }
+    .note {
+      margin-top: 8px; padding: 12px; border-radius: 10px; background: rgba(232,84,26,.12);
+      border: 1px dashed rgba(232,84,26,.45); font-size: 13px; color: #ffdccf;
+    }
+    .footer { margin-top: 26px; font-size: 12px; color: #888; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    @media (max-width: 760px) {
+      .nav { top: 8px; }
+      .footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-progress" id="topProgress"></div>
+  <div class="wrap">
+    <div class="nav">
+      <a class="logo" href="index.html">MIME<span>360</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a class="active" href="terms-and-conditions.html">Terms</a>
+        <a href="cookie-policy.html">Cookies</a>
+      </div>
+    </div>
+
+    <header class="hero">
+      <p class="eyebrow">Legal</p>
+      <h1>Terms & Conditions</h1>
+      <p class="lead">These terms govern use of our website and service discussions initiated through MIME360. By using this site, you agree to these terms.</p>
+      <p class="meta"><strong>Effective Date:</strong> April 10, 2026</p>
+    </header>
+
+    <section class="section reveal">
+      <h2>1. Website Use</h2>
+      <p>You agree to use this website lawfully and not attempt to disrupt, damage, or misuse any part of the site, code, forms, or communications.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>2. Service Scope</h2>
+      <p>Information on this website is for general business and service understanding. Final scope, pricing, timelines, and deliverables are defined through separate written proposals or agreements.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>3. Contact Form & Communication</h2>
+      <p>When you submit your information, you confirm that details are accurate and you consent to MIME360 contacting you regarding your inquiry.</p>
+      <ul>
+        <li>Required fields are used to evaluate and respond to your request</li>
+        <li>Optional fields help us provide better project context</li>
+      </ul>
+    </section>
+
+    <section class="section reveal">
+      <h2>4. Intellectual Property</h2>
+      <p>Unless explicitly stated otherwise, website design, branding, text, visuals, and code on this site are owned by MIME360 and protected by applicable intellectual property laws.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>5. Third-Party Links & Platforms</h2>
+      <p>The site may contain links to third-party services (for example WhatsApp, Formspree, analytics tools). We are not responsible for third-party platform content, availability, or policies.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>6. Limitation of Liability</h2>
+      <p>We strive for accurate, updated information, but we do not guarantee uninterrupted availability or error-free content. MIME360 is not liable for indirect losses resulting from use of this website.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>7. Updates to Terms</h2>
+      <p>We may update these Terms & Conditions at any time. Updated versions become effective when posted on this page.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>8. Contact</h2>
+      <p>Questions about these terms can be sent to <strong>hello@mime360.com</strong>.</p>
+      <p class="note">This content is a practical website terms template and should be reviewed by legal counsel for contract-grade use.</p>
+    </section>
+
+    <div class="footer">
+      <span>© 2026 MIME360</span>
+      <span><a href="index.html" style="color:#ff8a50; text-decoration:none;">Back to Home</a></span>
+    </div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    sections.forEach(s => io.observe(s));
+
+    const bar = document.getElementById('topProgress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement;
+      const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      bar.style.width = pct + '%';
+    });
+  </script>
+</body>
+</html>
