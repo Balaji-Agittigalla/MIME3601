@@ -1,131 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC5J9M2VCC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RC5J9M2VCC');
-</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mime360 Blog | Shopify, SEO & Growth Insights</title>
-  <meta name="description" content="Actionable eCommerce growth insights from Mime360: Shopify development, SEO, conversion optimization, WhatsApp automation, and performance marketing.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MIME360 Blog | Digital Marketing, Shopify & SEO Insights</title>
+  <meta name="description" content="Read MIME360 blog content on Shopify development, SEO services India, ecommerce website development, and performance marketing for growth-focused brands.">
+  <meta name="keywords" content="mime360 blog, mime360 digital agency, shopify development agency, seo services india, ecommerce website development, digital marketing agency india">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mime360.in/blog.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --orange:#E8541A; --white:#F5F3EF; --muted:#9A9A9A; --dark:#0A0A0A; --border:rgba(255,255,255,.12);}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Manrope',sans-serif;background:var(--dark);color:var(--white)}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:linear-gradient(rgba(232,84,26,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(232,84,26,.06) 1px,transparent 1px);background-size:64px 64px}
-    .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 80px;position:relative;z-index:1}
-    .nav{display:flex;justify-content:space-between;align-items:center;gap:14px;border:1px solid var(--border);border-radius:14px;padding:12px 14px;background:rgba(10,10,10,.72);backdrop-filter:blur(8px);position:sticky;top:10px;z-index:9}
-    .logo{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:1px;text-decoration:none;color:var(--white)}
-    .logo span{color:var(--orange)}
-    .links{display:flex;gap:8px;flex-wrap:wrap}
-    .links a{text-decoration:none;color:#ddd;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:8px 12px;border:1px solid var(--border);border-radius:999px}
-    .links a.active,.links a:hover{background:rgba(232,84,26,.2);border-color:rgba(232,84,26,.7)}
-    .hero{padding:44px 0 24px}
-    .eyebrow{color:var(--orange);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-    h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,9vw,108px);line-height:.9;letter-spacing:1.5px;margin-top:8px}
-    .lead{max-width:780px;color:var(--muted);margin-top:10px}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:16px;margin-top:18px}
-    .card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.03);transform:translateY(18px);opacity:0;transition:.55s ease}
-    .card.in{transform:translateY(0);opacity:1}
-    .card img{width:100%;aspect-ratio:16/9;object-fit:cover}
-    .card-b{padding:14px}
-    .cat{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-    .title{font-size:22px;font-weight:800;line-height:1.25;margin-top:6px}
-    .desc{font-size:14px;color:#b8b8b8;margin-top:8px;line-height:1.6}
-    .meta{margin-top:12px;font-size:12px;color:#8d8d8d}
-    @media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(220px,1fr));}}
-    @media (max-width:700px){.grid{grid-template-columns:1fr}}
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="header.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "MIME360 Blog",
+    "url": "https://mime360.in/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "MIME360",
+      "url": "https://mime360.in"
+    }
+  }
+  </script>
 </head>
 <body>
-  <main class="wrap">
-    <div class="nav">
-      <a class="logo" href="index.html">MIME<span>360</span></a>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="mime360-about.html">About</a>
-        <a class="active" href="blog.html">Blog</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <input type="checkbox" id="menu-toggle">
+
+  <nav class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <label for="menu-toggle" class="mobile-close">×</label>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home<span class="nav-num">01</span><span class="nav-arrow">→</span></a>
+        <a href="about.html">About<span class="nav-num">02</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#services">Services<span class="nav-num">03</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#projects">Projects<span class="nav-num">04</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#reviews">Reviews<span class="nav-num">05</span><span class="nav-arrow">→</span></a>
+        <a href="blog.html">Blog<span class="nav-num">06</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#contact">Contact<span class="nav-num">07</span><span class="nav-arrow">→</span></a>
+      </div>
+      <div class="mobile-nav-bottom">
+        <a href="index.html#contact" class="mobile-cta-btn inquiry-trigger" data-service="General Inquiry">
+          Book a Free Demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+        <p class="mobile-nav-tagline">You innovate, we <span>automate.</span></p>
       </div>
     </div>
+  </nav>
 
-    <section class="hero">
-      <p class="eyebrow">Mime360 Insights</p>
-      <h1>GROWTH BLOG</h1>
-      <p class="lead">Professional, practical articles for Shopify brands and D2C teams that want better speed, rankings, conversions, and revenue.</p>
+  <header id="header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"></div>
+      <span class="logo-text">MIME360</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#contact" class="template-btn">
+      Contact Us
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    </a>
+    <label for="menu-toggle" class="mobile-menu-toggle">
+      <span></span><span></span><span></span>
+    </label>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">MIME360 Insights</p>
+        <h1>SEO and growth content for ambitious ecommerce brands</h1>
+        <p class="lead">The MIME360 blog supports our authority as a digital marketing agency in India with content on Shopify development, SEO services India, ecommerce website development, and conversion strategy.</p>
+      </div>
     </section>
 
-    <section class="grid" id="blogGrid">
-      <a class="card reveal" href="blog-shopify-speed-optimization.html">
-        <img src="assets/blog/cover-shopify-speed.svg" alt="Shopify Speed Optimization Guide">
-        <div class="card-b">
-          <div class="cat">Shopify Performance</div>
-          <h2 class="title">Shopify Speed Optimization: 15 Fixes That Improve Conversions</h2>
-          <p class="desc">A practical checklist to improve Core Web Vitals, reduce bounce rate, and increase store revenue.</p>
-          <p class="meta">8 min read</p>
-        </div>
-      </a>
-
-      <a class="card reveal" href="blog-seo-for-d2c-brands.html">
-        <img src="assets/blog/cover-d2c-seo.svg" alt="SEO for D2C Brands">
-        <div class="card-b">
-          <div class="cat">SEO Strategy</div>
-          <h2 class="title">SEO for D2C Brands: From Keyword Plan to Revenue Pages</h2>
-          <p class="desc">How to build category and content clusters that rank for intent and drive qualified traffic.</p>
-          <p class="meta">9 min read</p>
-        </div>
-      </a>
-
-      <a class="card reveal" href="blog-whatsapp-automation-playbook.html">
-        <img src="assets/blog/cover-whatsapp-automation.svg" alt="WhatsApp Automation Playbook">
-        <div class="card-b">
-          <div class="cat">Retention</div>
-          <h2 class="title">WhatsApp Automation Playbook for Cart Recovery & Repeat Sales</h2>
-          <p class="desc">Message flows, timing, and segmentation examples to improve retention and CLV.</p>
-          <p class="meta">7 min read</p>
-        </div>
-      </a>
-
-      <a class="card reveal" href="blog-conversion-homepage-checklist.html">
-        <img src="assets/blog/cover-homepage-conversion.svg" alt="Homepage Conversion Checklist">
-        <div class="card-b">
-          <div class="cat">CRO</div>
-          <h2 class="title">Homepage Conversion Checklist for Service & eCommerce Brands</h2>
-          <p class="desc">A clear structure for headlines, trust signals, CTAs, and visual hierarchy that converts.</p>
-          <p class="meta">6 min read</p>
-        </div>
-      </a>
-
-      <a class="card reveal" href="blog-performance-marketing-roas-framework.html">
-        <img src="assets/blog/cover-performance-marketing.svg" alt="Performance Marketing ROAS Framework">
-        <div class="card-b">
-          <div class="cat">Paid Ads</div>
-          <h2 class="title">Performance Marketing ROAS Framework for Scaling D2C Campaigns</h2>
-          <p class="desc">How to structure audiences, creative testing, and budget shifts for profitable growth.</p>
-          <p class="meta">10 min read</p>
-        </div>
-      </a>
+    <section class="section">
+      <div class="container blog-grid">
+        <article class="blog-card">
+          <img src="assets/blog/shopify-guide.svg" width="500" height="320" loading="lazy" alt="Best Shopify development agency in India illustration">
+          <div class="blog-card-body">
+            <p class="blog-label">Shopify Development Agency</p>
+            <h2><a href="blog-shopify-speed-optimization.html">Best Shopify Development Agency in India (2026 Guide)</a></h2>
+            <p>Why Shopify works, what brands should expect from a serious partner, and how MIME360 helps stores scale.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/blog/ecommerce-conversion.svg" width="500" height="320" loading="lazy" alt="High-converting ecommerce website illustration">
+          <div class="blog-card-body">
+            <p class="blog-label">Ecommerce Website Development</p>
+            <h2><a href="blog-conversion-homepage-checklist.html">How to Build a High-Converting E-commerce Website</a></h2>
+            <p>Practical UX, speed, and CRO ideas to improve conversion rates for ecommerce brands.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/blog/d2c-seo.svg" width="500" height="320" loading="lazy" alt="SEO strategy illustration for D2C brands">
+          <div class="blog-card-body">
+            <p class="blog-label">SEO Services India</p>
+            <h2><a href="blog-seo-for-d2c-brands.html">SEO Strategies for D2C Brands to Rank on Google</a></h2>
+            <p>Keyword research, technical SEO, and content planning for sustainable organic growth.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/blog/conversion-fixes.svg" width="500" height="320" loading="lazy" alt="Illustration for website conversion fixes">
+          <div class="blog-card-body">
+            <p class="blog-label">Conversion Optimization</p>
+            <h2><a href="blog-performance-marketing-roas-framework.html">Why Your Website Is Not Converting (And How to Fix It)</a></h2>
+            <p>Common trust, messaging, and performance mistakes that stop visitors from taking action.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="assets/blog/mime360-agency.svg" width="500" height="320" loading="lazy" alt="MIME360 digital agency brand illustration">
+          <div class="blog-card-body">
+            <p class="blog-label">MIME360 Digital Agency</p>
+            <h2><a href="blog-whatsapp-automation-playbook.html">MIME360 – Digital Marketing Agency in India</a></h2>
+            <p>A brand-focused page about MIME360, our services, and why businesses choose us.</p>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <script>
-    const items = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: .1 });
-    items.forEach((i) => io.observe(i));
-  </script>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">MIME360</p>
+        <p>Bengaluru, India</p>
+        <p><a href="mailto:mime360digital@gmail.com">mime360digital@gmail.com</a></p>
+      </div>
+      <div>
+        <p class="footer-title">Core Pages</p>
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About</a>
+        <a href="shopify-development-agency-india.html">Shopify Development Agency</a>
+      </div>
+      <div>
+        <p class="footer-title">Growth Services</p>
+        <a href="seo-services-india.html">SEO Services India</a>
+        <a href="performance-marketing-agency.html">Digital Marketing Agency</a>
+        <a href="website-development-company.html">Ecommerce Website Development</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script src="header.js" defer></script>
 </body>
 </html>

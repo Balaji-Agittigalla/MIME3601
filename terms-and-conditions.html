@@ -13,8 +13,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms and Conditions | MIME360</title>
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
   <style>
     :root {
       --orange: #E8541A;
@@ -50,15 +52,30 @@
       z-index: 0;
     }
     .top-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg,#ff8a50,var(--orange)); z-index: 99; }
-    .wrap { max-width: 1080px; margin: 0 auto; padding: 30px 20px 90px; position: relative; z-index: 1; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 130px 20px 90px; position: relative; z-index: 1; }
     .nav {
       display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
       padding: 14px 16px; border: 1px solid var(--border); border-radius: 14px;
       background: rgba(10,10,10,.72); backdrop-filter: blur(8px);
       position: sticky; top: 14px; z-index: 20; margin-bottom: 26px;
     }
-    .logo { text-decoration: none; color: var(--off-white); font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1.2px; }
-    .logo span { color: var(--orange); }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--off-white);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 1.2px;
+    }
+    .logo img {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
     .nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
     .nav-links a {
       text-decoration: none; color: #ddd; font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
@@ -98,18 +115,58 @@
   </style>
 </head>
 <body>
-  <div class="top-progress" id="topProgress"></div>
-  <div class="wrap">
-    <div class="nav">
-      <a class="logo" href="index.html">MIME<span>360</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="privacy-policy.html">Privacy</a>
-        <a class="active" href="terms-and-conditions.html">Terms</a>
-        <a href="cookie-policy.html">Cookies</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <input type="checkbox" id="menu-toggle">
+
+  <nav class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <label for="menu-toggle" class="mobile-close">×</label>
+      <div class="mobile-nav-links">
+        <a href="index.html">Home<span class="nav-num">01</span><span class="nav-arrow">→</span></a>
+        <a href="about.html">About<span class="nav-num">02</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#services">Services<span class="nav-num">03</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#projects">Projects<span class="nav-num">04</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#reviews">Reviews<span class="nav-num">05</span><span class="nav-arrow">→</span></a>
+        <a href="blog.html">Blog<span class="nav-num">06</span><span class="nav-arrow">→</span></a>
+        <a href="index.html#contact">Contact<span class="nav-num">07</span><span class="nav-arrow">→</span></a>
+      </div>
+      <div class="mobile-nav-bottom">
+        <a href="index.html#contact" class="mobile-cta-btn inquiry-trigger" data-service="General Inquiry">
+          Book a Free Demo
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+        <p class="mobile-nav-tagline">You innovate, we <span>automate.</span></p>
       </div>
     </div>
+  </nav>
 
+  <header id="header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"></div>
+      <span class="logo-text">MIME360</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#contact" class="template-btn">
+      Contact Us
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    </a>
+    <label for="menu-toggle" class="mobile-menu-toggle">
+      <span></span><span></span><span></span>
+    </label>
+  </header>
+
+  <div class="top-progress" id="topProgress"></div>
+  <div class="wrap" id="main">
     <header class="hero">
       <p class="eyebrow">Legal</p>
       <h1>Terms & Conditions</h1>
@@ -168,6 +225,7 @@
     </div>
   </div>
 
+  <script src="header.js" defer></script>
   <script>
     const sections = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver((entries) => {
