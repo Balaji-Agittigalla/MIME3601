@@ -13,7 +13,9 @@
   gtag('config', 'G-RC5J9M2VCC');
 </script>
 
-<link rel="icon" type="image/png" href="logo.png">
+  <link rel="icon" href="/favicon.png" sizes="96x96" type="image/png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -24,14 +26,14 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIME360 | Shopify Development & Web Development Agency in India</title>
-<meta name="description" content="MIME360 is a top digital agency in India specializing in Shopify development, custom web development, SEO, and performance marketing. Scale your brand today.">
+<title>MIME360 | Shopify Development Agency & Web Development Agency India</title>
+<meta name="description" content="MIME360 is a Shopify Development Agency in India helping D2C brands scale with fast, high-converting stores. Work with a Shopify Developer in India for web development, e-commerce website development, SEO, and performance marketing.">
 <meta name="keywords" content="mime360, web development, shopify development, mime360 digital agency, mime360 india, web development company india, shopify development agency, ecommerce website development">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://mime360.in/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="MIME360 | Shopify Development & Web Development Agency in India">
-<meta property="og:description" content="MIME360 is a top digital agency in India specializing in Shopify development, custom web development, SEO, and performance marketing. Scale your brand today.">
+<meta property="og:title" content="MIME360 | Shopify Development Agency & Web Development Agency India">
+<meta property="og:description" content="MIME360 is a Shopify Development Agency in India helping D2C brands scale with fast, high-converting stores. Work with a Shopify Developer in India for web development, e-commerce website development, SEO, and performance marketing.">
 <meta property="og:url" content="https://mime360.in/">
 <meta property="og:site_name" content="MIME360">
 <meta name="twitter:card" content="summary_large_image">
@@ -41,32 +43,74 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://mime360.in/#organization",
       "name": "MIME360",
-      "url": "https://mime360.in",
+      "url": "https://mime360.in/",
       "logo": "https://mime360.in/logo.png",
       "sameAs": [
-        "https://www.linkedin.com",
-        "https://www.instagram.com",
+        "https://www.linkedin.com/company/mime360/",
+        "https://www.instagram.com/mime360/",
         "https://x.com/mime360digital",
-        "https://www.youtube.com/@MIME360"
+        "https://www.youtube.com/@MIME360",
+        "https://www.facebook.com/mime360/"
       ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "mime360digital@gmail.com"
-      }
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "mime360digital@gmail.com",
+          "availableLanguage": ["en"]
+        }
+      ]
     },
     {
       "@type": "WebSite",
+      "@id": "https://mime360.in/#website",
       "name": "MIME360",
-      "url": "https://mime360.in/"
+      "url": "https://mime360.in/",
+      "publisher": { "@id": "https://mime360.in/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://mime360.in/#localbusiness",
+      "name": "MIME360",
+      "url": "https://mime360.in/",
+      "image": "https://mime360.in/logo.png",
+      "telephone": "+91-00000-00000",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["India", "Global"],
+      "sameAs": [
+        "https://www.linkedin.com/company/mime360/",
+        "https://www.instagram.com/mime360/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://mime360.in/#services",
+      "name": "Shopify Development & Web Development Services",
+      "provider": { "@id": "https://mime360.in/#organization" },
+      "areaServed": ["India", "Global"],
+      "serviceType": [
+        "Shopify Development",
+        "E-commerce Website Development",
+        "Web Development",
+        "SEO Services",
+        "Performance Marketing"
+      ]
     }
   ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <link rel="stylesheet" href="header.css">
 
 <style>
@@ -179,7 +223,7 @@
 
   .hero-headline {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(64px, 7.5vw, 120px);
+    font-size: clamp(64px, 5.5vw, 120px);
     line-height: .93;
     letter-spacing: .01em;
     color: var(--white);
@@ -850,6 +894,14 @@
     margin-bottom: 60px;
     padding: 0 24px;
   }
+  .brands-head p:nth-of-type(2),
+  .brands-head p:nth-of-type(3),
+  .brands-head p:nth-of-type(4),
+  .brands-head p:nth-of-type(5) {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
 
   .brands-badge {
     display: inline-block;
@@ -877,7 +929,7 @@
     font-size: 15px;
     color: #555;
     line-height: 1.7;
-    max-width: 440px;
+    max-width: 95%;
     margin: 0 auto;
   }
 
@@ -2359,7 +2411,7 @@
     <div class="hero-left">
       <p class="eyebrow">Digital Marketing Agency in Bengaluru, India</p>
       <h1 class="hero-headline">
-        <span class="line"><span>MIME360 Builds</span></span>
+        <span class="line"><span>MIME360 — Shopify Development Agency</span></span>
         <span class="line"><span><em class="accent">High-Converting Shopify Stores</em></span></span>
         <span class="line"><span><em class="accent"><strong>Fast. Scalable. Built to Sell.</strong></em></span></span>
       </h1>
@@ -2449,7 +2501,7 @@
 
   <div class="team-content">
     <div class="team-image-container">
-      <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/tVDg230sxN3guk1uVhxlFkIu1s.avif?v=1774938891336b" alt="E-commerce development work" class="team-image">
+      <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/tVDg230sxN3guk1uVhxlFkIu1s.avif?v=1774938891336b" alt="E-commerce development work" class="team-image" loading="lazy" decoding="async">
 
       <a href="#video-modal" class="play-video-btn">
         <div class="play-circle">
@@ -2468,10 +2520,10 @@
       <h3>BUILT FOR PERFORMANCE,<br>NOT JUST DESIGN</h3>
       <div class="reviews">
         <div class="avatar-group">
-          <img src="https://i.pravatar.cc/150?img=11" alt="User 1">
-          <img src="https://i.pravatar.cc/150?img=12" alt="User 2">
-          <img src="https://i.pravatar.cc/150?img=13" alt="User 3">
-          <img src="https://i.pravatar.cc/150?img=14" alt="User 4">
+          <img src="https://i.pravatar.cc/150?img=11" alt="User 1" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/150?img=12" alt="User 2" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/150?img=13" alt="User 3" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/150?img=14" alt="User 4" loading="lazy" decoding="async">
         </div>
         <div class="stars">★★★★★</div>
         <p>Focused on delivering fast, scalable, and conversion-driven websites</p>
@@ -2487,6 +2539,11 @@
 <div class="brands-head">
   <div class="brands-badge">Agency Experience</div>
   <h2>Partnering with Exceptional Brands</h2>
+  <p>MIME360 is a performance-first <strong>Shopify Development Agency</strong> and <strong>Web Development Agency</strong> in India, built for D2C brands that care about speed, UX, and conversion. If you’re looking for <strong>Shopify Experts India</strong> who can translate a business goal into a storefront that sells, our team focuses on outcomes: clean builds, measurable improvements, and a site experience that feels premium on every device.</p>
+  <p>From new store launches to migrations and redesigns, we handle end-to-end <strong>E-commerce Website Development</strong>—theme development, app integrations, custom sections, speed optimization, and CRO-focused improvements. You also get a reliable technical partner: a <strong>Shopify Developer India</strong> team that ships fast, tests thoroughly, and keeps your build scalable as you add products, collections, offers, and marketing campaigns.</p>
+  <p>Because growth needs more than “a nice website”, we bake in technical SEO fundamentals from day one: clear page structure, fast loading assets, crawlable links, and on-page content that matches search intent. Whether you want to win discovery for “Shopify Development Agency”, “Web Development Agency India”, or service-led keywords, we align copy, UX, and performance so your site can rank and convert. If you’re based in Bengaluru, India, we also build for local visibility while keeping the experience scalable for global audiences.</p>
+  <p>Our workflow is simple and transparent: we start with a quick audit of your storefront and goals, map the pages that drive revenue (homepage, collections, product pages, and landing pages), then build and optimize in sprints. You get a conversion-first structure, clean implementation, and performance safeguards so your store stays fast even as you add apps, tracking, and new campaigns. If you need a Web Development Agency India partner that can handle both Shopify execution and supporting pages for content and SEO, MIME360 keeps everything connected.</p>
+  <p>Explore our services for <a href="shopify-development-agency-india.html">Shopify development</a>, <a href="website-development-company.html">website development</a>, <a href="seo-services-india.html">SEO</a>, and <a href="performance-marketing-agency.html">performance marketing</a>—or <a href="index.html#contact">book a free demo</a> to get a clear plan for your store’s next growth milestone.</p>
 </div>
   <div class="marquee-outer brands-row-ltr">
     <div class="marquee-track" id="brandtrack1"></div>
@@ -2545,7 +2602,7 @@
 
         <!-- Cards -->
         <div class="mw-card" data-brand="Eyeware" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_114620.png?v=1775801803" alt="Eyeware" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_114620.png?v=1775801803" alt="Eyeware" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Eyeware</span>
@@ -2554,7 +2611,7 @@
         </div>
 
         <div class="mw-card" data-brand="Fat2Fit" data-tag="CRO & Dev">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_115724.png?v=1775629678" alt="Fat2Fit" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_115724.png?v=1775629678" alt="Fat2Fit" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Fat2Fit</span>
@@ -2564,7 +2621,7 @@
 
         
         <div class="mw-card" data-brand="OKOYA" data-tag="UI Redesign">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_154521.png?v=1775817059" alt="OKOYA" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_154521.png?v=1775817059" alt="OKOYA" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">OKOYA</span>
@@ -2573,7 +2630,7 @@
         </div>
 
         <div class="mw-card" data-brand="ENZA" data-tag="Full Build">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_113750.png?v=1775801300" alt="ENZA" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_113750.png?v=1775801300" alt="ENZA" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">ENZA</span>
@@ -2582,7 +2639,7 @@
         </div>
 
         <div class="mw-card" data-brand="Sports" data-tag="Performance">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_120404.png?v=1775630077" alt="Sports" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_120404.png?v=1775630077" alt="Sports" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Sports</span>
@@ -2591,7 +2648,7 @@
         </div>
 
         <div class="mw-card" data-brand="clothing" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_120701.png?v=1775630249" alt="clothing" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_120701.png?v=1775630249" alt="clothing" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">clothing</span>
@@ -2600,7 +2657,7 @@
         </div>
 
         <div class="mw-card" data-brand="Blanket" data-tag="Full Build">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124202.png?v=1775632346" alt="Blanket" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124202.png?v=1775632346" alt="Blanket" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Blanket</span>
@@ -2609,7 +2666,7 @@
         </div>
 
         <div class="mw-card" data-brand="Carnot" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_123926.png?v=1775632193" alt="Carnot" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_123926.png?v=1775632193" alt="Carnot" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Carnot</span>
@@ -2618,7 +2675,7 @@
         </div>
 
         <div class="mw-card" data-brand="Bedsheet" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_120612.png?v=1775630200" alt="Spaces" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_120612.png?v=1775630200" alt="Spaces" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Bedsheet</span>
@@ -2627,7 +2684,7 @@
         </div>
 
         <div class="mw-card" data-brand="studio" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124343.png?v=1775632448" alt="studio" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124343.png?v=1775632448" alt="studio" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">studio</span>
@@ -2636,7 +2693,7 @@
         </div>
 
         <div class="mw-card" data-brand="Selfcare" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124616.png?v=1775632602" alt="Selfcare" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124616.png?v=1775632602" alt="Selfcare" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Selfcare</span>
@@ -2645,7 +2702,7 @@
         </div>
 
         <div class="mw-card" data-brand="Organic life" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_154041.png?v=1775817059" alt="Organic life" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-10_154041.png?v=1775817059" alt="Organic life" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Organic life</span>
@@ -2654,7 +2711,7 @@
         </div>
 
         <div class="mw-card" data-brand="Theprimalsports" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124811.png?v=1775632715" alt="Theprimalsports" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124811.png?v=1775632715" alt="Theprimalsports" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Theprimalsports</span>
@@ -2663,7 +2720,7 @@
         </div>
 
         <div class="mw-card" data-brand="Rally appliances" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124855.png?v=1775632759" alt="Rally appliances" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124855.png?v=1775632759" alt="Rally appliances" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">Rally appliances</span>
@@ -2671,7 +2728,7 @@
         </div>
 
         <div class="mw-card" data-brand="clothings" data-tag="Shopify Theme">
-          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124937.png?v=1775632829" alt="clothings" class="mw-card__img" loading="eager">
+          <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-08_124937.png?v=1775632829" alt="clothings" class="mw-card__img" loading="lazy" decoding="async">
           <div class="mw-card__glass"></div>
           <div class="mw-card__info">
             <span class="mw-card__brand">clothings</span>
@@ -3271,12 +3328,12 @@
 <div class="hwch-hero">
   <div class="hwch-bg-text">SERVICES — WHAT WE DO — HOW WE HELP — SERVICES —</div>
   <div class="hwch-hero-inner">
-    <h1 class="hwch-title">
+    <h2 class="hwch-title">
       <span class="word"><span>HOW</span></span>
       <span class="word"><span>WE</span></span>
       <span class="word"><span>CAN</span></span>
       <span class="word"><span>HELP</span></span>
-    </h1>
+    </h2>
     <span class="hwch-label">(Services)</span>
   </div>
 </div>
@@ -4581,6 +4638,8 @@
      Three.js bg + marquee HTML injection
 ───────────────────────────────────── -->
 <script>
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof THREE === 'undefined') return;
 /* ── THREE.JS BACKGROUND (kept — no CSS replacement for WebGL) ── */
 const canvas = document.getElementById('bg-canvas');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
@@ -4770,6 +4829,7 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     document.querySelectorAll('nav ul li a').forEach(l => l.classList.remove('active'));
     this.classList.add('active');
   });
+});
 });
 </script>
 <script>
@@ -5450,7 +5510,7 @@ function countUp(el, target, suffix) {
 >
   <div class="wa-float-text"><span>Talk to us</span></div>
   <div class="wa-float-avatar">
-    <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-20_214112.png?v=1776701501" alt="Friendly support person">
+      <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-20_214112.png?v=1776701501" alt="Friendly support person" loading="lazy" decoding="async">
   </div>
 </button>
 
@@ -5672,7 +5732,7 @@ function countUp(el, target, suffix) {
     </div>
 
     <div class="mime360-header">
-      <h2 class="mime360-title"><img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/mime360_dark-removebg-preview.png?v=1775883623" alt="MIME360"/></h2>
+      <h2 class="mime360-title"><img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/mime360_dark-removebg-preview.png?v=1775883623" alt="MIME360" loading="lazy" decoding="async"/></h2>
     </div>
     <div id="mime360-canvas" aria-label="Interactive MIME360 3D footer scene"></div>
     <p class="mime360-note"></p>
@@ -5681,7 +5741,9 @@ function countUp(el, target, suffix) {
 </section>
 
 <script>
-(() => {
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof THREE === 'undefined') return;
+  (() => {
   const mount = document.getElementById('mime360-canvas');
   const preFooter = document.getElementById('mime360-prefooter');
   if (!mount || typeof THREE === 'undefined') return;
@@ -5921,7 +5983,8 @@ function countUp(el, target, suffix) {
     renderer.setSize(w, h);
   }
   window.addEventListener('resize', onResize);
-})();
+  })();
+});
 </script>
 
 </body>

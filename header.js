@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <button class="wa-float-widget" id="waOpenFormBtn" type="button" aria-label="Open support form">
       <div class="wa-float-text"><span>Talk to us</span></div>
       <div class="wa-float-avatar">
-        <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-20_214112.png?v=1776701501" alt="Friendly support person">
+        <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Screenshot_2026-04-20_214112.png?v=1776701501" alt="Friendly support person" loading="lazy" decoding="async">
       </div>
     </button>
     <div class="wa-modal-backdrop" id="waModalBackdrop" aria-hidden="true">
