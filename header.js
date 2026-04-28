@@ -1,4 +1,153 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const ensureBackgroundLayers = () => {
+    const body = document.body;
+    if (!body) return;
+
+    let canvas =
+      document.getElementById("background-animation") ||
+      document.getElementById("bg-canvas");
+    if (!canvas) {
+      canvas = document.createElement("canvas");
+      canvas.id = "background-animation";
+      canvas.setAttribute("aria-hidden", "true");
+      body.prepend(canvas);
+    }
+
+    let noise = document.querySelector(".noise");
+    if (!noise) {
+      noise = document.createElement("div");
+      noise.className = "noise";
+      noise.setAttribute("aria-hidden", "true");
+      canvas.insertAdjacentElement("afterend", noise);
+    }
+
+    let vignette = document.querySelector(".vignette");
+    if (!vignette) {
+      vignette = document.createElement("div");
+      vignette.className = "vignette";
+      vignette.setAttribute("aria-hidden", "true");
+      noise.insertAdjacentElement("afterend", vignette);
+    }
+  };
+
+  const startBackgroundCanvas = () => {
+    if (typeof THREE !== "undefined") return;
+
+    const canvas = document.getElementById("bg-canvas");
+    if (!canvas || canvas.dataset.animBound) return;
+    canvas.dataset.animBound = "true";
+
+    const ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) return;
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let w = 0;
+    let h = 0;
+
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = window.innerWidth || document.documentElement.clientWidth || 1;
+      h = window.innerHeight || document.documentElement.clientHeight || 1;
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+
+    resize();
+    window.addEventListener("resize", resize, { passive: true });
+
+    const count = Math.max(42, Math.min(78, Math.floor((w * h) / 24000)));
+    const pts = Array.from({ length: count }, () => {
+      const orange = Math.random() < 0.22;
+      return {
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.18,
+        vy: (Math.random() - 0.5) * 0.18,
+        r: orange ? 1.8 + Math.random() * 1.2 : 1.2 + Math.random() * 1.0,
+        orange
+      };
+    });
+
+    const linkDist = 120;
+    const fade = (t) => Math.max(0, Math.min(1, t));
+
+    const drawFrame = () => {
+      ctx.clearRect(0, 0, w, h);
+
+      for (const p of pts) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < -10) p.x = w + 10;
+        if (p.x > w + 10) p.x = -10;
+        if (p.y < -10) p.y = h + 10;
+        if (p.y > h + 10) p.y = -10;
+
+        const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
+        if (p.orange) {
+          glow.addColorStop(0, "rgba(255, 106, 0, 0.65)");
+          glow.addColorStop(1, "rgba(255, 106, 0, 0)");
+        } else {
+          glow.addColorStop(0, "rgba(255, 255, 255, 0.22)");
+          glow.addColorStop(1, "rgba(255, 255, 255, 0)");
+        }
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = p.orange ? "rgba(255, 106, 0, 0.75)" : "rgba(255, 255, 255, 0.25)";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      for (let i = 0; i < pts.length; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+          const a = pts[i];
+          const b = pts[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist > linkDist) continue;
+          const alpha = 0.11 * fade(1 - dist / linkDist);
+          ctx.strokeStyle = a.orange || b.orange
+            ? `rgba(255, 106, 0, ${alpha})`
+            : `rgba(255, 255, 255, ${alpha * 0.8})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    };
+
+    if (prefersReducedMotion) {
+      drawFrame();
+      return;
+    }
+
+    let raf = 0;
+    const tick = () => {
+      if (document.hidden) {
+        raf = requestAnimationFrame(tick);
+        return;
+      }
+      drawFrame();
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    window.addEventListener("pagehide", () => {
+      if (raf) cancelAnimationFrame(raf);
+    }, { once: true });
+  };
+
+  ensureBackgroundLayers();
+  startBackgroundCanvas();
+
   const supportWidgetMarkup = `
     <button class="wa-float-widget" id="waOpenFormBtn" type="button" aria-label="Open support form">
       <div class="wa-float-text"><span>Talk to us</span></div>
